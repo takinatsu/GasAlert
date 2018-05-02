@@ -1,3 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <resources>
-    <string name="app_name">GasAlert</string>
+    <!-- /////////////// 初期設定画面 ////////////////// -->
+    <string name="app_name">ガソリンアラートシステム（仮）</string>
+    <string name="firstMsg">初期値を入力してください。</string>
+
+    <!-- 名前入力欄 -->
+    <string name="nameText">名前を入力してください。</string>
+    <string name="nameInput">なつお</string>
+
+    <!-- 燃費入力欄 -->
+    <string name="fuelConsumptionText">燃費を入力してください。</string>
+    <string name="fuelConsumptionInput">00</string>
+
+    <!-- タンク容量入力欄 -->
+    <string name="capacityText">タンク容量を入力してください。</string>
+    <string name="capacityInput">0.0</string>
+
+    <!-- 登録ボタン -->
+    <string name="addButton">登録</string>
+
+    <!-- /////////////// メニュー画面 ////////////////// -->
+
 </resources>

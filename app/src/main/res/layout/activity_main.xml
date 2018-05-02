@@ -4,15 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.gasalert.android.gasalert.FirstSettingActivity">
 
     <TextView
+        android:id="@+id/firstMsgLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:text="@string/firstMsg"
+        app:layout_constraintBottom_toTopOf="@+id/nameTextLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameTextLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/nameText"
+        app:layout_constraintBottom_toTopOf="@+id/nameInputText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstMsgLabel" />
+
+    <EditText
+        android:id="@+id/nameInputText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/nameInput"
+        app:layout_constraintBottom_toTopOf="@+id/fuelConsumptionTextLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextLabel" />
+
+    <TextView
+        android:id="@+id/fuelConsumptionTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="@string/fuelConsumptionText"
+        app:layout_constraintBottom_toTopOf="@+id/fuelConsumptionInputText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameInputText"
+        app:layout_constraintVertical_bias="0.433" />
+
+    <EditText
+        android:id="@+id/fuelConsumptionInputText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="@string/fuelConsumptionInput"
+        app:layout_constraintBottom_toTopOf="@+id/capacityTextLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fuelConsumptionTextLabel" />
+
+    <TextView
+        android:id="@+id/capacityTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/capacityText"
+        app:layout_constraintBottom_toTopOf="@+id/capacityInputText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fuelConsumptionInputText"
+        app:layout_constraintVertical_bias="0.526" />
+
+    <EditText
+        android:id="@+id/capacityInputText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="@string/capacityInput"
+        app:layout_constraintBottom_toTopOf="@+id/addButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/capacityTextLabel" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addButton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/capacityInputText" />
 
 </android.support.constraint.ConstraintLayout>
