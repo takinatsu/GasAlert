@@ -14,11 +14,11 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-//        Intent intent = getIntent();
-//        String userName = intent.getStringExtra("userName");
-//
-//        TextView tvWelcomeMsg = findViewById(R.id.welcomeMsg);
-//
-//        tvWelcomeMsg.setText(userName);
+        Intent intent = getIntent();
+        String userName = intent.getStringExtra("userName");
+
+        TextView tvWelcomeMsg = findViewById(R.id.welcomeMsg);
+
+        tvWelcomeMsg.setText(userName);
     }
 }
