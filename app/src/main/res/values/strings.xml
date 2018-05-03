@@ -18,6 +18,7 @@
 
     <!-- 登録ボタン -->
     <string name="addButton">登録</string>
+    <string name="title_activity_maps">Map</string>
 
     <!-- /////////////// メニュー画面 ////////////////// -->
 
