@@ -1,16 +1,19 @@
 package com.gasalert.android.gasalert;
 
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
+import com.gasalert.android.gasalart.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
 
-import com.gasalert.android.gasalart.R;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -24,6 +27,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
     }
 
 
@@ -39,10 +43,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        // LatLng sydney = new LatLng(-34, 151);
+        // mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+
+
+        List<LatLng> points = new ArrayList<>();
+        PolylineOptions polylineOptions = new PolylineOptions();
+
+        LatLng now = new LatLng(34.7404662, 135.5620287);
+
+        LatLng point = new LatLng(34.7496348, 135.5628544);
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(now, 15));
+
+        points.add(now);
+        points.add(point);
+        polylineOptions.addAll(points);
+        polylineOptions.width(10);
+        polylineOptions.color(0x550000ff);
+        mMap.addPolyline(polylineOptions);
     }
 }

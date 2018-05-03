@@ -22,7 +22,7 @@ public class MenuActivity extends AppCompatActivity {
         TextView tvWelcomeMsg = findViewById(R.id.welcomeMsg);
 
         // ようこそメッセージ
-        tvWelcomeMsg.setText(userName);
+        tvWelcomeMsg.setText("ようこそ、" + userName + "さん！");
 
         // ボタン押下時イベント
         Button btClick = findViewById(R.id.mapButton);
